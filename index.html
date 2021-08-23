@@ -129,7 +129,9 @@
                   <p class="place-desc">
                     Praesent tincidunt sed tellus ut rutrum sed vitae justo.
                   </p>
-                  <a href="#" class="place-buy-btn">Buy Tickets</a>
+                  <button class="place-buy-btn js-buy-ticket">
+                    Buy Tickets
+                  </button>
                 </div>
               </div>
 
@@ -145,7 +147,9 @@
                   <p class="place-desc">
                     Praesent tincidunt sed tellus ut rutrum sed vitae justo.
                   </p>
-                  <a href="#" class="place-buy-btn">Buy Tickets</a>
+                  <button class="place-buy-btn js-buy-ticket">
+                    Buy Tickets
+                  </button>
                 </div>
               </div>
 
@@ -161,7 +165,9 @@
                   <p class="place-desc">
                     Praesent tincidunt sed tellus ut rutrum sed vitae justo.
                   </p>
-                  <a href="#" class="place-buy-btn">Buy Tickets</a>
+                  <button class="place-buy-btn js-buy-ticket">
+                    Buy Tickets
+                  </button>
                 </div>
               </div>
 
@@ -179,9 +185,9 @@
 
       <div id="footer"></div>
 
-      <div class="modal">
-        <div class="model-container">
-          <div class="modal-close">
+      <div class="modal js-modal">
+        <div class="model-container js-modal-container">
+          <div class="modal-close js-modal-close">
             <i class="fas fa-times"></i>
           </div>
 
@@ -220,5 +226,36 @@
         </div>
       </div>
     </div>
+
+    <script>
+      const buyBtns = document.querySelectorAll(".js-buy-ticket");
+      const modal = document.querySelector(".js-modal");
+      const modalContainer = document.querySelector(".js-modal-container");
+      const modalClose = document.querySelector(".js-modal-close");
+
+      //show modal Buy Tickets (add class open into modal)
+      function showBuyTickets() {
+        modal.classList.add("open");
+      }
+
+      //hide modal Buy Tickets (remove class open into modal)
+      function hideBuyTickets() {
+        modal.classList.remove("open");
+      }
+
+      //repeat each button tag and listen to click behavior
+      for (const buyBtn of buyBtns) {
+        buyBtn.addEventListener("click", showBuyTickets);
+      }
+
+      //listen to click behavior into button close
+      modalClose.addEventListener("click", hideBuyTickets);
+
+      modal.addEventListener("click", hideBuyTickets);
+
+      modalContainer.addEventListener("click", function (event) {
+        event.stopPropagation();
+      });
+    </script>
   </body>
 </html>
