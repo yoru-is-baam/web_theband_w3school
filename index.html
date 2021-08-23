@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>The Band</title>
     <link rel="stylesheet" href="./assets/css/style.css" />
     <link
       rel="stylesheet"
@@ -178,6 +178,47 @@
       </div>
 
       <div id="footer"></div>
+
+      <div class="modal">
+        <div class="model-container">
+          <div class="modal-close">
+            <i class="fas fa-times"></i>
+          </div>
+
+          <header class="modal-header">
+            <i class="modal-heading-icon fas fa-suitcase"></i>
+            Tickets
+          </header>
+
+          <div class="modal-body">
+            <label for="ticket-quantity" class="modal-label">
+              <i class="fas fa-shopping-cart"></i>
+              Tickets, $15 per person
+            </label>
+            <input
+              id="ticket-quantity"
+              class="modal-input"
+              placeholder="How many?"
+            />
+
+            <label for="ticket-email" class="modal-label">
+              <i class="fas fa-user"></i>
+              Send to
+            </label>
+            <input
+              id="ticket-email"
+              class="modal-input"
+              placeholder="Enter email"
+            />
+
+            <button id="buy-tickets">Pay <i class="fas fa-check"></i></button>
+          </div>
+
+          <footer class="modal-footer">
+            <p class="modal-help">Need <a href="">help?</a></p>
+          </footer>
+        </div>
+      </div>
     </div>
   </body>
 </html>
