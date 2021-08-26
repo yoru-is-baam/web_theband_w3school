@@ -7,6 +7,7 @@
 }
 
 html {
+  scroll-behavior: smooth;
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -200,9 +201,12 @@ html {
 
 #content .content-section {
   width: 800px;
+  max-width: 100%;
+  padding: 64px 0 112px;
   margin-left: auto;
   margin-right: auto;
-  padding: 64px 0 112px;
+  padding-left: 16px; /*responsive for tablet but PC + 16px*/
+  padding-right: 16px;
 }
 
 #content .section-heading {
