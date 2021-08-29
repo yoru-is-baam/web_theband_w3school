@@ -37,6 +37,7 @@ html {
   display: inline-block;
   margin-top: 15px;
   font-size: 15px;
+  -webkit-appearance: none;
 }
 
 .btn:hover {
@@ -195,8 +196,7 @@ html {
   position: relative;
   margin-top: 46px;
   padding-top: 50%;
-  background: url("/assets/img/sliders/slider1.jpg") top center / cover
-    no-repeat;
+  background: url("../img/sliders/slider1.jpg") top center / cover no-repeat;
 }
 
 #slider .text-content {
@@ -215,6 +215,7 @@ html {
 
 #slider .text-description {
   font-size: 15px;
+  text-shadow: 0 0 1px #000;
 }
 
 #content {
@@ -360,6 +361,14 @@ html {
   padding: 10px;
   border: 1px solid #ccc;
   width: 100%;
+}
+
+.contact-info a {
+  opacity: 0.8;
+}
+
+.contact-info a:hover {
+  opacity: 1;
 }
 
 /* Map section */
